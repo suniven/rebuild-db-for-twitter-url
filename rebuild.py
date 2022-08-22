@@ -64,6 +64,15 @@ def main():
         session.commit()
         session.add(webpage_info_abs)
         session.commit()
+
+        # 修正原本错误的重定向信息
+        wrong_intermediate_urls_file = twitter_root + id + '\\' + vpn + '\\' + id + '_redirect_info.txt'
+        with open(wrong_intermediate_urls_file, 'w', encoding='utf-8') as f:
+            f.write(webpage_info.intermediate_urls)
+        # 添加landing page url信息
+        new_landing_page_url_file = twitter_root + id + '\\' + vpn + '\\' + id + '_landing_page_url.txt'
+        with open(new_landing_page_url_file, 'w', encoding='utf-8') as f:
+            f.write(webpage_info.landing_page)
     session.close()
     engine.dispose()
 
