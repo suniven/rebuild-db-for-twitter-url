@@ -22,11 +22,11 @@ def clear_file(dir):
                 print(f)
                 # os.path.getmtime获取文件的修改时间戳，在转换成日期
                 s = datetime.fromtimestamp(os.path.getmtime(f))
-                print(s.strftime('%Y-%m-%d %H:%M:%S'))
+                # print(s.strftime('%Y-%m-%d %H:%M:%S'))
                 # 判断文件是否是满足删除条件
                 if (datetime.now() - s) > diff:
                     os.remove(f)
-                    print(f, '删除')
+                    print('删除{0} {1}'.format(f, s.strftime('%Y-%m-%d %H:%M:%S')))
             else:
                 continue
         # 若不是文件，那就是文件夹（目录），使用递归，继续以上操作
