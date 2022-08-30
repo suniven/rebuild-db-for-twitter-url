@@ -7,9 +7,9 @@ Base = declarative_base()
 
 
 # 定义对象
-class WebpageInfo(Base):
+class WebpageInfoTwitter(Base):
     # 表名
-    __tablename__ = 'webpage_info'
+    __tablename__ = 'webpage_info_twitter_all'
 
     id = Column(mysql.BIGINT, primary_key=True)
     url = Column(String(1000))
@@ -20,9 +20,9 @@ class WebpageInfo(Base):
     vpn = Column(String(50))
 
 
-class WebpageInfoAbs(Base):
+class WebpageInfoTwitterAbs(Base):
     # 表名
-    __tablename__ = 'webpage_info_abs'
+    __tablename__ = 'webpage_info_twitter_all_abs'
 
     id = Column(mysql.BIGINT, primary_key=True)
     url = Column(String(1000))

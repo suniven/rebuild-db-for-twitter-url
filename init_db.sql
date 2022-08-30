@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `webpage_info`
+CREATE TABLE IF NOT EXISTS `webpage_info_twitter_all`
 (
     `id`                bigint(20) auto_increment NOT NULL COMMENT 'id',
     `url`               varchar(1000)             NOT NULL COMMENT 'short url in comments',
@@ -10,12 +10,12 @@ CREATE TABLE IF NOT EXISTS `webpage_info`
 
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8 COMMENT ='webpage_info';
+  DEFAULT CHARSET = utf8 COMMENT ='webpage_info_twitter_all';
 
 alter table webpage_info
     convert to character set utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `webpage_info_abs`
+CREATE TABLE IF NOT EXISTS `webpage_info_twitter_all_abs`
 (
     `id`                bigint(20) auto_increment NOT NULL COMMENT 'id',
     `url`               varchar(1000)             NOT NULL COMMENT 'short url in comments',
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `webpage_info_abs`
 
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8 COMMENT ='webpage_info 精简版';
+  DEFAULT CHARSET = utf8 COMMENT ='webpage_info_twitter_all 精简版';
 
 alter table webpage_info
     convert to character set utf8mb4;

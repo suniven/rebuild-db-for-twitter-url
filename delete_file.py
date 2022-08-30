@@ -1,7 +1,7 @@
 import os
 from datetime import datetime, timedelta
 
-dir = 'D:\\Project\\Twitter URL data\\'
+dir = 'H:\\Project\\YouTube Twitter URL data'
 test_dir = 'D:\\Python\\rebuild-db-for-twitter-url\\test\\'
 
 
